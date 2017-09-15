@@ -246,7 +246,13 @@ def reorder_beam(beam_size, batch_size, beam_val, output, is_first,
 
 class NeuralGPU(object):
   """Neural GPU Model."""
-
+  
+  # parameter initialization function for the neural network, with 
+  # parameters including learning_rate, num_gpus, sampling_rate, etc. 
+  # Note that do_rnn=False, so here we don't use the recurrent neural
+  # network, also backward=True, indicating that here we will do a 
+  # backward propagation, do_layer_norm=False means we won't carry out layer
+  # normalization in this initialization step
   def __init__(self, nmaps, vec_size, niclass, noclass, dropout,
                max_grad_norm, cutoff, nconvs, kw, kh, height, mem_size,
                learning_rate, min_length, num_gpus, num_replicas,
