@@ -8,8 +8,13 @@ Pre-trained ImageNet models from the following papers:
 
 ## Contact
 
+Originated from：
 Author: Alexey Kurakin,
 github: [AlexeyKurakin](https://github.com/AlexeyKurakin)
+
+Revised from：
+Author：Minghe Ren，Xin li, Shuang Zhao
+github:https://github.com/rmhsawyer/EC601-Project1/edit/Minghe-Ren/README.md
 
 ## Pre-requesites and installation
 
