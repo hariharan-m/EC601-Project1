@@ -14,6 +14,9 @@
 # ==============================================================================
 """The Neural GPU Model."""
 
+# The main purpose of this program is to construct a neural network model
+# based on a GPU
+
 import time
 
 import numpy as np
