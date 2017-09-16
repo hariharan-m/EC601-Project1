@@ -55,10 +55,26 @@ print(sess.run(adder_node, {a: [1, 3], b: [2, 4]}))
 add_and_triple = adder_node * 3.
 print(sess.run(add_and_triple, {a: 3, b: 4.5}))
 
+# Variables enable us to add trainable parameters to a graph. 
 W = tf.Variable([.3], dtype=tf.float32)
 b = tf.Variable([-.3], dtype=tf.float32)
 x = tf.placeholder(tf.float32)
-linear_model = W * x + b
+linear_model = W * x + b # Define a simple linear model
 
+# Variable initializations
 init = tf.global_variables_initializer()
 sess.run(init)
+
+print(sess.run(linear_model, {x, [1, 2, 3, 4]}))
+
+# Compute the classical squared loss function
+y = tf.placeholder(tf.float32)
+squared_deltas = tf.square(linear_model - y)
+loss = tf.reduce_sum(squared_deltas)
+print(sess.run(loss, {x: [1, 2, 3, 4], y: [0, -1, -2, -3]}))
+
+# The model performance can be improved by tuning the model parameters
+fixW = tf.assign(W, [-1.])
+fixb = tf.assign(b, [1.])
+sess.run([fixW, fixb])
+print(sess.run(loss, {x: [1, 2, 3, 4], y: [0, -1, -2, -3]}))
