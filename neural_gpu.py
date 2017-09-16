@@ -14,8 +14,12 @@
 # ==============================================================================
 """The Neural GPU Model."""
 
-# The main purpose of this program is to construct a neural network model
-# based on a GPU
+"""
+The main purpose of this program is to construct a neural network model
+based on a GPU. A neural network, or in particular a Neural Turing Machine (NTM)
+is a learning model basically using error backpropagation algorithm to tune the 
+model parameters to learn its own algorithm for certain problems.
+"""
 
 import time
 
