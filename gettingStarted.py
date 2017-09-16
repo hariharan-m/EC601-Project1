@@ -42,3 +42,23 @@ print(sess.run([node1, node2]))
 node3 = tf.add(node1, node2)
 print("node3:", node3)
 print("sess.run(node3):", sess.run(node3))
+
+# A graph can be parameterized to accept external inputs, known as placeholders, 
+# which is basically a promise to provide a value later
+a = tf.placeholder(tf.float32)
+b = tf.placeholder(tf.float32)
+adder_node = a + b  # + provides a shortcut for tf.add(a, b)
+
+print(sess.run(adder_node, {a: 3, b: 4.5}))
+print(sess.run(adder_node, {a: [1, 3], b: [2, 4]}))
+
+add_and_triple = adder_node * 3.
+print(sess.run(add_and_triple, {a: 3, b: 4.5}))
+
+W = tf.Variable([.3], dtype=tf.float32)
+b = tf.Variable([-.3], dtype=tf.float32)
+x = tf.placeholder(tf.float32)
+linear_model = W * x + b
+
+init = tf.global_variables_initializer()
+sess.run(init)
