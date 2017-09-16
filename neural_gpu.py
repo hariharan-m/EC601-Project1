@@ -14,8 +14,21 @@
 # ==============================================================================
 """The Neural GPU Model."""
 
-# The main purpose of this program is to construct a neural network model
-# based on a GPU
+"""
+The main purpose of this program is to construct a neural network model
+based on a GPU. 
+
+A neural network, or in particular a Neural Turing Machine (NTM)
+is a learning model basically using error backpropagation algorithm to tune the 
+model parameters to learn its own algorithm for certain problems.
+
+However, the traitional NTMs commonly have a sequential network structure, which 
+turns out to be inefficient and non-practical when dealing with larger data set 
+and greater depth of network layers. The Neural GPU is a network architecture to 
+address this problem. Specifically, it has a highly parallel structure which is
+based on a type of convolutional gated recurrent unit, alongwith the same compu-
+tational universality with NTMs.
+"""
 
 import time
 
