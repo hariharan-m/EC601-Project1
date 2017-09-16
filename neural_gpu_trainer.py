@@ -647,6 +647,12 @@ def get_best_beam(beam_model, sess, inp, target, batch_size, beam_size,
 
 def train():
   """Train the model."""
+  
+  """
+  The main training techniques adopted here include grid search, curriculum learning,
+  gradients noise and gate cutoff. 
+  """
+  
   batch_size = FLAGS.batch_size * FLAGS.num_gpus
   (model, beam_model, min_length, max_length, checkpoint_dir,
    (train_set, dev_set, en_vocab_path, fr_vocab_path), sv, sess) = initialize()
