@@ -294,11 +294,11 @@ class NeuralGPU(object):
     batch_size = tf.shape(gpu_input[0])[0]
 
     if backward:
-      adam_lr = 0.005 * self.lr
-      adam = tf.train.AdamOptimizer(adam_lr, epsilon=1e-3)
+      adadelta_lr = 0.005 * self.lr
+      adadelta = tf.train.AdadeltaOptimizer(adadelta_lr, epsilon=1e-08)
 
-      def adam_update(grads):
-        return adam.apply_gradients(zip(grads, tf.trainable_variables()),
+      def adadelta_update(grads):
+        return adadelta.apply_gradients(zip(grads, tf.trainable_variables()),
                                     global_step=self.global_step,
                                     name="adam_update")
 
