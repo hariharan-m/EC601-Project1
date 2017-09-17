@@ -99,7 +99,6 @@ def run_eval(eval_ops, summary_writer, saver):
 
     _log_values(sess, value_ops_dict, summary_writer=summary_writer)
 
-
 def _log_values(sess, value_ops, summary_writer=None):
   """Evaluate, log, and write summaries of the eval metrics in value_ops."""
   metric_names, value_ops = zip(*value_ops.items())
