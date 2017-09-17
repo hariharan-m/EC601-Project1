@@ -55,7 +55,7 @@ tf.app.flags.DEFINE_integer("kh", 3, "Kernel height.")
 tf.app.flags.DEFINE_integer("height", 4, "Height.")
 tf.app.flags.DEFINE_integer("mem_size", -1, "Memory size (sqrt)")
 tf.app.flags.DEFINE_integer("soft_mem_size", 1024, "Softmax memory this size.")
-tf.app.flags.DEFINE_integer("num_gpus", 1, "Number of GPUs to use.")
+tf.app.flags.DEFINE_integer("num_gpus", 4, "Number of GPUs to use.")
 tf.app.flags.DEFINE_integer("num_replicas", 1, "Number of replicas in use.")
 tf.app.flags.DEFINE_integer("beam_size", 1, "Beam size during decoding. "
                             "If 0, no decoder, the non-extended Neural GPU.")
