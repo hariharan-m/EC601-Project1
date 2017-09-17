@@ -57,6 +57,12 @@ This is the repository of our first homework assignment for **EC601: Product Des
 
 ## Project Description
 
+
+## Models
+- [adversarial_crypto](adversarial_crypto): protecting communications with adversarial neural cryptography.
+- [adversarial_text](adversarial_text): semi-supervised sequence learning with adversarial training.
+- [attention_ocr](attention_ocr): a model for real-world image text extraction.
+
 ### Adversarially trained ImageNet models
 
 Pre-trained ImageNet models from the following papers:
