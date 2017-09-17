@@ -5,10 +5,23 @@ Bonjour â tous! 😁
 This is the repository of our first homework assignment for **EC601: Product Design in ECE (Fall 2017).**
 
 ## Team Members
-Minghe Ren: sawyermh@bu.edu
-Shuang Zhao: zs1995@bu.edu
-Xin Li: bulixin@bu.edu
+**Minghe Ren**
 
+          Email: sawyermh@bu.edu
+          
+          Github: https://github.com/rmhsawyer
+
+**Shuang Zhao** 
+
+          Email: zs1995@bu.edu
+          
+          Github: https://github.com/ShuangZhao95
+
+**Xin Li**
+
+          Email: bulixin@bu.edu 
+          
+          Github: https://github.com/helloimlixin
 
 ## Assignment Instructions
 
