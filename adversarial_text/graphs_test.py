@@ -146,7 +146,6 @@ class GraphsTest(tf.test.TestCase):
     FLAGS.num_candidate_samples = -1
     FLAGS.num_classes = 2
     FLAGS.use_seq2seq_autoencoder = False
-
     # Reset Graph
     tf.reset_default_graph()
 
