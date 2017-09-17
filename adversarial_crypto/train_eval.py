@@ -61,7 +61,8 @@ EVE_MULTIPLIER = 2  # Train Eve 2x for every step of Alice/Bob
 MAX_TRAINING_LOOPS = 850000
 BOB_LOSS_THRESH = 0.02  # Exit when Bob loss < 0.02 and Eve > 7.7 bits
 EVE_LOSS_THRESH = 7.7
-
+BOB_LOSS_THRESH1 = 0.04  # Exit when Bob loss < 0.04 and Eve > 7.5 bits
+EVE_LOSS_THRESH2 = 7.5
 # Logging and evaluation.
 PRINT_EVERY = 200  # In training, log every 200 steps.
 EVE_EXTRA_ROUNDS = 2000  # At end, train eve a bit more.
