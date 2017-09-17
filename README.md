@@ -1,13 +1,29 @@
-# EC601_team12
-#
-# Adversarially trained ImageNet models
+# EC601_Team12
+
+Bonjour â tous! 😁
+
+This is the repository of our first homework assignment for **EC601: Product Design in ECE (Fall 2017).**
+
+## Team Members
+Minghe Ren: sawyermh@bu.edu
+Shuang Zhao: zs1995@bu.edu
+Xin Li: bulixin@bu.edu
+
+
+## Assignment Instructions
+
+
+
+## Project Description
+
+### Adversarially trained ImageNet models
 
 Pre-trained ImageNet models from the following papers:
 
 * [Adversarial Machine Learning at Scale](https://arxiv.org/abs/1611.01236)
 * [Ensemble Adversarial Training: Attacks and Defenses](https://arxiv.org/abs/1705.07204)
 
-## Contact
+### Contact
 Originated from:
 Author: Alexey Kurakin,
 github: [AlexeyKurakin](https://github.com/AlexeyKurakin)
