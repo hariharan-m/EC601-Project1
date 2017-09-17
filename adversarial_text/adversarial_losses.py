@@ -64,7 +64,6 @@ def adversarial_loss(embedded, loss, loss_fn):
   perturb = _scale_l2(grad, FLAGS.perturb_norm_length)
   return loss_fn(embedded + perturb)
 
-
 def virtual_adversarial_loss(logits, embedded, inputs,
                              logits_from_embedding_fn):
   """Virtual adversarial loss.
@@ -84,21 +83,17 @@ def virtual_adversarial_loss(logits, embedded, inputs,
   Returns:
     kl: float scalar.
   """
-  # Stop gradient of logits. See https://arxiv.org/abs/1507.00677 for details.
+
   logits = tf.stop_gradient(logits)
 
-  # Only care about the KL divergence on the final timestep.
+
   weights = inputs.eos_weights
   assert weights is not None
 
-  # Initialize perturbation with random noise.
-  # shape(embedded) = (batch_size, num_timesteps, embedding_dim)
+
   d = tf.random_normal(shape=tf.shape(embedded))
 
-  # Perform finite difference method and power iteration.
-  # See Eq.(8) in the paper http://arxiv.org/pdf/1507.00677.pdf,
-  # Adding small noise to input and taking gradient with respect to the noise
-  # corresponds to 1 power iteration.
+
   for _ in xrange(FLAGS.num_power_iteration):
     d = _scale_l2(
         _mask_by_length(d, inputs.length), FLAGS.small_constant_for_finite_diff)
