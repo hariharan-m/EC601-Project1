@@ -26,33 +26,33 @@ This is the repository of our first homework assignment for **EC601: Product Des
 
 #### Agile Project Management Using Trello
 
-    ✅ Create accounts in Trello
+✅ Create accounts in Trello
 
-    ✅ Open a new project: **EC601**
+✅ Open a new project: **EC601**
 
-    ✅ Assign tasks to each team member with respective task durations
+✅ Assign tasks to each team member with respective task durations
 
-    ✅
+✅
 
-    ✅
+✅
 
 #### Code Management Using Github
 
-    ✅ Create Accounts in Github
+✅ Create Accounts in Github
 
-    ✅
+✅
 
-    ✅
+✅
 
-    ✅
+✅
 
-    ✅
+✅
 
 #### Team Communicatons Using Slack
   
-    ✅ Create a team in Slack
+✅ Create a team in Slack
 
-    ✅ Communicate inside team using Slack
+✅ Communicate inside team using Slack
 
 
 ## Project Description
