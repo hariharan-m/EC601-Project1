@@ -32,21 +32,20 @@ This is the repository of our first homework assignment for **EC601: Product Des
 
 ✅ Assign tasks to each team member with respective task durations
 
-✅
+✅Define with your teammate(s) all tasks required to accomplish this homework as one sprint
 
-✅
+✅Update your Trello daily
 
 #### Code Management Using Github
 
 ✅ Create Accounts in Github
 
-✅
+✅Practice basic operations of GitHub
 
-✅
+✅Upload and Modify TensorFlow Modules
 
-✅
+✅Prepare final packages for project including project description, readme file and isntructions to build the SW
 
-✅
 
 #### Team Communicatons Using Slack
   
