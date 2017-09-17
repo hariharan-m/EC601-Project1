@@ -29,7 +29,7 @@ import data_utils as data
 import neural_gpu as ngpu
 import wmt_utils as wmt
 
-tf.app.flags.DEFINE_float("lr", 0.1, "Learning rate.")
+tf.app.flags.DEFINE_float("lr", 0.05, "Learning rate.")
 tf.app.flags.DEFINE_float("init_weight", 0.8, "Initial weights deviation.")
 tf.app.flags.DEFINE_float("max_grad_norm", 4.0, "Clip gradients to this norm.")
 tf.app.flags.DEFINE_float("cutoff", 1.2, "Cutoff at the gates.")
