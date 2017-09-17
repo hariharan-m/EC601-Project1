@@ -29,15 +29,15 @@ import data_utils as data
 import neural_gpu as ngpu
 import wmt_utils as wmt
 
-tf.app.flags.DEFINE_float("lr", 0.1, "Learning rate.")
+tf.app.flags.DEFINE_float("lr", 0.05, "Learning rate.")
 tf.app.flags.DEFINE_float("init_weight", 0.8, "Initial weights deviation.")
 tf.app.flags.DEFINE_float("max_grad_norm", 4.0, "Clip gradients to this norm.")
 tf.app.flags.DEFINE_float("cutoff", 1.2, "Cutoff at the gates.")
 tf.app.flags.DEFINE_float("curriculum_ppx", 9.9, "Move curriculum if ppl < X.")
 tf.app.flags.DEFINE_float("curriculum_seq", 0.3, "Move curriculum if seq < X.")
-tf.app.flags.DEFINE_float("dropout", 0.1, "Dropout that much.")
+tf.app.flags.DEFINE_float("dropout", 0.2, "Dropout that much.")
 tf.app.flags.DEFINE_float("grad_noise_scale", 0.0, "Gradient noise scale.")
-tf.app.flags.DEFINE_float("max_sampling_rate", 0.1, "Maximal sampling rate.")
+tf.app.flags.DEFINE_float("max_sampling_rate", 0.01, "Maximal sampling rate.")
 tf.app.flags.DEFINE_float("length_norm", 0.0, "Length normalization.")
 tf.app.flags.DEFINE_float("train_beam_freq", 0.0, "Beam-based training.")
 tf.app.flags.DEFINE_float("train_beam_anneal", 20000, "How many steps anneal.")
