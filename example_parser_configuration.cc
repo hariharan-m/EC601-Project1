@@ -12,6 +12,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
+#include <iostream>
 #include "tensorflow/core/example/example_parser_configuration.h"
 
 #include <vector>
@@ -151,21 +152,6 @@ Status ExtractExampleParserConfiguration(
         strings::StrCat(node_output_prefix, shapes_offset);
   }
 
-  for (int i = 0; i < num_dense; ++i) {
-    int output_idx = dense_values_output_start + i;
-    (*fixed_len_features)[i].values_output_tensor_name =
-        strings::StrCat(node_output_prefix, output_idx);
-  }
-  return Status::OK();
-}
-
-Status ExampleParserConfigurationProtoToFeatureVectors(
-    const ExampleParserConfiguration& config_proto,
-    std::vector<FixedLenFeature>* fixed_len_features,
-    std::vector<VarLenFeature>* var_len_features) {
-  const auto& feature_map = config_proto.feature_map();
-  for (auto it = feature_map.cbegin(); it != feature_map.cend(); ++it) {
-    string key = it->first;
     const auto& config = it->second;
     if (config.has_fixed_len_feature()) {
       const auto& fixed_config = config.fixed_len_feature();
@@ -198,3 +184,18 @@ Status ExampleParserConfigurationProtoToFeatureVectors(
 }
 
 }  // namespace tensorflow
+  for (int i = 0; i < num_dense; ++i) {
+    int output_idx = dense_values_output_start + i;
+    (*fixed_len_features)[i].values_output_tensor_name =
+        strings::StrCat(node_output_prefix, output_idx);
+  }
+  return Status::OK();
+}
+
+Status ExampleParserConfigurationProtoToFeatureVectors(
+    const ExampleParserConfiguration& config_proto,
+    std::vector<FixedLenFeature>* fixed_len_features,
+    std::vector<VarLenFeature>* var_len_features) {
+  const auto& feature_map = config_proto.feature_map();
+  for (auto it = feature_map.cbegin(); it != feature_map.cend(); ++it) {
+    string key = it->first;
