@@ -28,7 +28,7 @@ This is the repository of our first homework assignment for **EC601: Product Des
 
 ✅ Create accounts in Trello
 
-✅ Open a new project: **EC601**
+✅ Open a new project: [**EC601**](https://trello.com/b/kt7cNDNs/ec601)
 
 ✅ Assign tasks to each team member with respective task durations
 
