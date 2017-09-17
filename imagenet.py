@@ -38,14 +38,14 @@ _SPLITS_TO_SIZES = {
 }
 
 _ITEMS_TO_DESCRIPTIONS = {
-    'image': 'A color image of varying height and width.',
-    'label': 'The label id of the image, integer between 0 and 999',
+    'image': 'An image of different height and width with color.',
+    'label': 'The label id of the image, integer in range of (0,999)',
     'label_text': 'The text of the label.',
     'object/bbox': 'A list of bounding boxes.',
-    'object/label': 'A list of labels, one per each object.',
+    'object/label': 'A list of labels, each object owns one label.',
 }
 
-_NUM_CLASSES = 1001
+_NUM_CLASSES = 1101
 
 
 def get_split(split_name, dataset_dir, file_pattern=None, reader=None):
