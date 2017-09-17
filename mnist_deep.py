@@ -138,8 +138,8 @@ def main(_):
                                                             logits=y_conv)
   cross_entropy = tf.reduce_mean(cross_entropy)
 
-  with tf.name_scope('adam_optimizer'):
-    train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
+  with tf.name_scope('adadelta_optimizer'):
+    train_step = tf.train.AdadeltaOptimizer(0.5).minimize(cross_entropy)
 
   with tf.name_scope('accuracy'):
     correct_prediction = tf.equal(tf.argmax(y_conv, 1), tf.argmax(y_, 1))
@@ -153,7 +153,7 @@ def main(_):
 
   with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
-    for i in range(20000):
+    for i in range(2000):
       batch = mnist.train.next_batch(50)
       if i % 100 == 0:
         train_accuracy = accuracy.eval(feed_dict={
