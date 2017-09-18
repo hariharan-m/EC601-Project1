@@ -32,8 +32,8 @@ flags.DEFINE_float('perturb_norm_length', 5.0,
                    '5.0 is optimal on IMDB with virtual adversarial training. ')
 
 # Virtual adversarial training parameters
-flags.DEFINE_integer('num_power_iteration', 1, 'The number of power iteration')
-flags.DEFINE_float('small_constant_for_finite_diff', 1e-1,
+flags.DEFINE_integer('num_power_iteration', 2, 'The number of power iteration')
+flags.DEFINE_float('small_constant_for_finite_diff', 1e-2,
                    'Small constant for finite difference method')
 
 # Parameters for building the graph
