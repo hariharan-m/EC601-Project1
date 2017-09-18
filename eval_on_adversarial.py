@@ -121,11 +121,11 @@ def step_target_class_adversarial_images(x, eps, one_hot_target_class):
   logits, end_points = create_model(x, reuse=True)
   cross_entropy = tf.losses.softmax_cross_entropy(one_hot_target_class,
                                                   logits,
-                                                  label_smoothing=0.1,
+                                                  label_smoothing=0.05,
                                                   weights=1.0)
   cross_entropy += tf.losses.softmax_cross_entropy(one_hot_target_class,
                                                    end_points['AuxLogits'],
-                                                   label_smoothing=0.1,
+                                                   label_smoothing=0.4,
                                                    weights=0.4)
   x_adv = x - eps * tf.sign(tf.gradients(cross_entropy, x)[0])
   x_adv = tf.clip_by_value(x_adv, -1.0, 1.0)
